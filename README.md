@@ -3,7 +3,7 @@ Real world examples of most popular design patterns implemented in .NET Core Web
 
 ## Table of Contents
 
-> Creational patterns
+### Creational patterns
 
 - [Factory pattern](https://github.com/h4570/design-patterns/tree/master/factory-pattern)
 - [Abstract factory - TODO](https://github.com/h4570/design-patterns/tree/master/abstract-factory)
@@ -11,7 +11,7 @@ Real world examples of most popular design patterns implemented in .NET Core Web
 - [Prototype - TODO](https://github.com/h4570/design-patterns/tree/master/prototype)
 - [Singleton - TODO](https://github.com/h4570/design-patterns/tree/master/singleton)
 
-> Structural patterns
+### Structural patterns
 
 - [Adapter - TODO](https://github.com/h4570/design-patterns/tree/master/adapter)
 - [Bridge - TODO](https://github.com/h4570/design-patterns/tree/master/bridge)
@@ -21,7 +21,7 @@ Real world examples of most popular design patterns implemented in .NET Core Web
 - [Flyweight - TODO](https://github.com/h4570/design-patterns/tree/master/flyweight)
 - [Proxy - TODO](https://github.com/h4570/design-patterns/tree/master/proxy)
 
-> Behavioral patterns
+### Behavioral patterns
 
 - [Chain of responsibility - TODO](https://github.com/h4570/design-patterns/tree/master/chain-of-responsibility)
 - [Command - TODO](https://github.com/h4570/design-patterns/tree/master/command)
