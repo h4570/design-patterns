@@ -1,7 +1,7 @@
-﻿using factory_pattern.Models;
+﻿using abstract_factory.Models;
 using System.Linq;
 
-namespace factory_pattern.Data.Postgres
+namespace abstract_factory.Data.Postgres
 {
     public class PostgresUser : IDbUser
     {

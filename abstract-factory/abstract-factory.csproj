@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>factory_pattern</RootNamespace>
+    <RootNamespace>abstract_factory</RootNamespace>
   </PropertyGroup>
 
 

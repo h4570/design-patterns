@@ -1,4 +1,4 @@
-﻿namespace factory_pattern.Data.Postgres
+﻿namespace abstract_factory.Data.Postgres
 {
     public class PostgresFactory : IDbFactory
     {

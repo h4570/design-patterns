@@ -1,6 +1,6 @@
-﻿using factory_pattern.Models;
+﻿using abstract_factory.Models;
 
-namespace factory_pattern.Data
+namespace abstract_factory.Data
 {
 
     public interface IDbFactory

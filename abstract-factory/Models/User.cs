@@ -1,4 +1,4 @@
-﻿namespace factory_pattern.Models
+﻿namespace abstract_factory.Models
 {
 
     public interface IUser

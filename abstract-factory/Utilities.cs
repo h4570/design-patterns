@@ -1,8 +1,8 @@
-﻿using factory_pattern.Data;
-using factory_pattern.Data.Mongodb;
-using factory_pattern.Data.Postgres;
+﻿using abstract_factory.Data;
+using abstract_factory.Data.Mongodb;
+using abstract_factory.Data.Postgres;
 
-namespace factory_pattern
+namespace abstract_factory
 {
 
     public enum DbSetting

@@ -1,7 +1,7 @@
-﻿using factory_pattern.Models;
+﻿using abstract_factory.Models;
 using System.Collections.Generic;
 
-namespace factory_pattern.Data.Postgres
+namespace abstract_factory.Data.Postgres
 {
     public class PostgresDbContext
     {
