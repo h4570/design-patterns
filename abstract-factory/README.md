@@ -8,3 +8,8 @@ To test this example, you can run "**/user/latest**" endpoint and compare result
 
 Unlike factory, its main purpose is to create objects or another factories.  
 I described core difference between factory and abstract factory in factory/README.md
+
+### Client code
+![Client code](http://apgcglz.cluster028.hosting.ovh.net/design-patterns/abstract-factory-1.png)
+
+![Client code](http://apgcglz.cluster028.hosting.ovh.net/design-patterns/abstract-factory-2.png)
