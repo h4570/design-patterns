@@ -13,3 +13,10 @@ The sample factory has two methods.
 2 - doSomething() method - Uses createProduct() and does some operations on it.  
 An example implementation of factory may modify createProduct(), but doSomething() remains unchanged.  
 Customer will be used mostly doSomething() method.
+
+### Client code
+![Client code](http://apgcglz.cluster028.hosting.ovh.net/design-patterns/factory-1.png)
+
+![Client code](http://apgcglz.cluster028.hosting.ovh.net/design-patterns/factory-2.png)
+
+![Client code](http://apgcglz.cluster028.hosting.ovh.net/design-patterns/factory-3.png)
