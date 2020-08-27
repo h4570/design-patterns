@@ -7,7 +7,7 @@ Real world examples of most popular design patterns implemented in .NET Core Web
 
 - [Factory pattern](https://github.com/h4570/design-patterns/tree/master/factory)
 - [Abstract factory](https://github.com/h4570/design-patterns/tree/master/abstract-factory)
-- [Builder - TODO](https://github.com/h4570/design-patterns/tree/master/builder)
+- [Builder](https://github.com/h4570/design-patterns/tree/master/builder)
 - [Prototype - TODO](https://github.com/h4570/design-patterns/tree/master/prototype)
 - [Singleton - TODO](https://github.com/h4570/design-patterns/tree/master/singleton)
 
