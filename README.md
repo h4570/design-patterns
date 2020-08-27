@@ -5,10 +5,10 @@ Real world examples of most popular design patterns implemented in .NET Core Web
 
 ### Creational patterns
 
-- [Factory](https://github.com/h4570/design-patterns/tree/master/factory)
-- [Abstract factory](https://github.com/h4570/design-patterns/tree/master/abstract-factory)
-- [Builder](https://github.com/h4570/design-patterns/tree/master/builder)
-- [Prototype - TODO](https://github.com/h4570/design-patterns/tree/master/prototype)
+- [Factory - Calculate discount for different types of customers](https://github.com/h4570/design-patterns/tree/master/factory)
+- [Abstract factory - Database provider switcher](https://github.com/h4570/design-patterns/tree/master/abstract-factory)
+- [Builder - SQL creator for different SQL server providers](https://github.com/h4570/design-patterns/tree/master/builder)
+- [Prototype - Simple implementation of object shadow copy](https://github.com/h4570/design-patterns/tree/master/prototype)
 - [Singleton - TODO](https://github.com/h4570/design-patterns/tree/master/singleton)
 
 ### Structural patterns
