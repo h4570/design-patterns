@@ -11,6 +11,9 @@ you can see **two basic implementations of adapter design - simple way and parti
 ### Extension method for objects adapting
 ![Adapter implementation](http://apgcglz.cluster028.hosting.ovh.net/design-patterns/adapter-3.png)
 
+### What are we adapting
+![Files structure](http://apgcglz.cluster028.hosting.ovh.net/design-patterns/adapter-5.png)
+
 ### Example adapter
 ![Adapter example](http://apgcglz.cluster028.hosting.ovh.net/design-patterns/adapter-4.png)
 
