@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prototype", "prototype\prot
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "singleton", "singleton\singleton.csproj", "{C2CB0C99-DB0D-49FE-98B7-0498538C22CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adapter", "adapter\adapter.csproj", "{4251C462-AE2C-40A1-84C5-285F449CBE8D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,5 +88,17 @@ Global
 		{C2CB0C99-DB0D-49FE-98B7-0498538C22CD}.Release|x64.Build.0 = Release|Any CPU
 		{C2CB0C99-DB0D-49FE-98B7-0498538C22CD}.Release|x86.ActiveCfg = Release|Any CPU
 		{C2CB0C99-DB0D-49FE-98B7-0498538C22CD}.Release|x86.Build.0 = Release|Any CPU
+		{4251C462-AE2C-40A1-84C5-285F449CBE8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4251C462-AE2C-40A1-84C5-285F449CBE8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4251C462-AE2C-40A1-84C5-285F449CBE8D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4251C462-AE2C-40A1-84C5-285F449CBE8D}.Debug|x64.Build.0 = Debug|Any CPU
+		{4251C462-AE2C-40A1-84C5-285F449CBE8D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4251C462-AE2C-40A1-84C5-285F449CBE8D}.Debug|x86.Build.0 = Debug|Any CPU
+		{4251C462-AE2C-40A1-84C5-285F449CBE8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4251C462-AE2C-40A1-84C5-285F449CBE8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4251C462-AE2C-40A1-84C5-285F449CBE8D}.Release|x64.ActiveCfg = Release|Any CPU
+		{4251C462-AE2C-40A1-84C5-285F449CBE8D}.Release|x64.Build.0 = Release|Any CPU
+		{4251C462-AE2C-40A1-84C5-285F449CBE8D}.Release|x86.ActiveCfg = Release|Any CPU
+		{4251C462-AE2C-40A1-84C5-285F449CBE8D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

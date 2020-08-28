@@ -13,7 +13,7 @@ Real world examples of most popular design patterns implemented in .NET Core Web
 
 ### Structural patterns
 
-- [Adapter - TODO](https://github.com/h4570/design-patterns/tree/master/adapter)
+- [Adapter - Adapting two different data objects with minimalistic API - looks pro 😎](https://github.com/h4570/design-patterns/tree/master/adapter)
 - [Bridge - TODO](https://github.com/h4570/design-patterns/tree/master/bridge)
 - [Composite - TODO](https://github.com/h4570/design-patterns/tree/master/composite)
 - [Decorator - TODO](https://github.com/h4570/design-patterns/tree/master/decorator)
