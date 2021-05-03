@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "singleton", "singleton\sing
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adapter", "adapter\adapter.csproj", "{4251C462-AE2C-40A1-84C5-285F449CBE8D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bridge", "bridge\bridge.csproj", "{335D5FA0-F576-45BA-8680-FD9020D9C9BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -100,5 +102,17 @@ Global
 		{4251C462-AE2C-40A1-84C5-285F449CBE8D}.Release|x64.Build.0 = Release|Any CPU
 		{4251C462-AE2C-40A1-84C5-285F449CBE8D}.Release|x86.ActiveCfg = Release|Any CPU
 		{4251C462-AE2C-40A1-84C5-285F449CBE8D}.Release|x86.Build.0 = Release|Any CPU
+		{335D5FA0-F576-45BA-8680-FD9020D9C9BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{335D5FA0-F576-45BA-8680-FD9020D9C9BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{335D5FA0-F576-45BA-8680-FD9020D9C9BB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{335D5FA0-F576-45BA-8680-FD9020D9C9BB}.Debug|x64.Build.0 = Debug|Any CPU
+		{335D5FA0-F576-45BA-8680-FD9020D9C9BB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{335D5FA0-F576-45BA-8680-FD9020D9C9BB}.Debug|x86.Build.0 = Debug|Any CPU
+		{335D5FA0-F576-45BA-8680-FD9020D9C9BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{335D5FA0-F576-45BA-8680-FD9020D9C9BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{335D5FA0-F576-45BA-8680-FD9020D9C9BB}.Release|x64.ActiveCfg = Release|Any CPU
+		{335D5FA0-F576-45BA-8680-FD9020D9C9BB}.Release|x64.Build.0 = Release|Any CPU
+		{335D5FA0-F576-45BA-8680-FD9020D9C9BB}.Release|x86.ActiveCfg = Release|Any CPU
+		{335D5FA0-F576-45BA-8680-FD9020D9C9BB}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
