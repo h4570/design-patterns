@@ -1,8 +1,9 @@
 # Abstract factory pattern
 
-In this example abstract factory pattern was used to manage database provider.  
-As you can see, there are two implementations of DbFactory: *PostgreSQL* and *Mongodb*  
-To test this example, you can run "**/user/latest**" endpoint and compare results after change of **Constants.CURRENT_DATABASE** variable
+In this example abstract factory pattern was used to use different cooking logic for various croissants.  
+As you can see, there are two implementations of CroissantFactory: *Chocolate* and *Sweet*.  
+Base logic which is used by both implementations is created in Croissant class.
+To test this example, you can run "**/croissant/create**" endpoint and compare results after small change in endpoint logic.
 
 ## Abstract factory vs Factory
 

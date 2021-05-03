@@ -5,8 +5,8 @@ Real world examples of most popular design patterns implemented in .NET Core Web
 
 ### Creational patterns
 
-- [Factory - Calculate discount for different types of customers](https://github.com/h4570/design-patterns/tree/master/factory)
-- [Abstract factory - Database provider switcher](https://github.com/h4570/design-patterns/tree/master/abstract-factory)
+- [Factory - Create factories with different discount calculation logic](https://github.com/h4570/design-patterns/tree/master/factory)
+- [Abstract factory - Embedded croissant maker logic ](https://github.com/h4570/design-patterns/tree/master/abstract-factory)
 - [Builder - SQL query creator for different SQL server providers](https://github.com/h4570/design-patterns/tree/master/builder)
 - [Prototype - Simple implementation of object shadow copy](https://github.com/h4570/design-patterns/tree/master/prototype)
 - [Singleton - Thread safe file logger service](https://github.com/h4570/design-patterns/tree/master/singleton)
@@ -14,7 +14,7 @@ Real world examples of most popular design patterns implemented in .NET Core Web
 ### Structural patterns
 
 - [Adapter - Adapting various electronic components into one interface](https://github.com/h4570/design-patterns/tree/master/adapter)
-- [Bridge - TODO](https://github.com/h4570/design-patterns/tree/master/bridge)
+- [Bridge - Postgres and mongo database via one interface](https://github.com/h4570/design-patterns/tree/master/bridge)
 - [Composite - TODO](https://github.com/h4570/design-patterns/tree/master/composite)
 - [Decorator - TODO](https://github.com/h4570/design-patterns/tree/master/decorator)
 - [Facade - TODO](https://github.com/h4570/design-patterns/tree/master/facade)
