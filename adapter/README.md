@@ -6,16 +6,16 @@ Current implementation is more professional, but if you look for simpler way, fe
 you can see **two basic implementations of adapter design - simple way and partial class way**.
 
 ### Client code
-![Client code](http://apgcglz.cluster028.hosting.ovh.net/design-patterns/adapter-1.png)
+![Client code](https://raw.githubusercontent.com/h4570/design-patterns/master/adapter/pic-1.png)
 
 ### Extension method for objects adapting
-![Adapter implementation](http://apgcglz.cluster028.hosting.ovh.net/design-patterns/adapter-3.png)
+![Adapter implementation](https://raw.githubusercontent.com/h4570/design-patterns/master/adapter/pic-3.png)
 
 ### What are we adapting
-![Files structure](http://apgcglz.cluster028.hosting.ovh.net/design-patterns/adapter-5.png)
+![Files structure](https://raw.githubusercontent.com/h4570/design-patterns/master/adapter/pic-5.png)
 
 ### Example adapter
-![Adapter example](http://apgcglz.cluster028.hosting.ovh.net/design-patterns/adapter-4.png)
+![Adapter example](https://raw.githubusercontent.com/h4570/design-patterns/master/adapter/pic-4.png)
 
 ### Folders structure
-![Files structure](http://apgcglz.cluster028.hosting.ovh.net/design-patterns/adapter-2.png)
+![Files structure](https://raw.githubusercontent.com/h4570/design-patterns/master/adapter/pic-2.png)
