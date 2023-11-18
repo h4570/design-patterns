@@ -11,6 +11,6 @@ Unlike factory, its main purpose is to create objects or another factories.
 I described core difference between factory and abstract factory in factory/README.md
 
 ### Client code
-![Client code](http://apgcglz.cluster028.hosting.ovh.net/design-patterns/abstract-factory-1.png)
+![Client code](https://raw.githubusercontent.com/h4570/design-patterns/abstract-factory/pic-1.png)
 
-![Client code](http://apgcglz.cluster028.hosting.ovh.net/design-patterns/abstract-factory-2.png)
+![Client code](https://raw.githubusercontent.com/h4570/design-patterns/abstract-factory/pic-2.png)
