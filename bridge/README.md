@@ -5,6 +5,6 @@ As you can see, there are two implementations of IDatabaseProvider: *PostgreSQL*
 To test this example, you can run "**/user/latest**" endpoint and compare results after changing first parameter of `Utilities.GetCurrentDbProvider()` function.
 
 ### Client code
-![Client code](http://apgcglz.cluster028.hosting.ovh.net/design-patterns/bridge-1.png)
+![Client code](https://raw.githubusercontent.com/h4570/design-patterns/master/bridge/pic-1.png)
 
-![Client code](http://apgcglz.cluster028.hosting.ovh.net/design-patterns/bridge-2.png)
+![Client code](https://raw.githubusercontent.com/h4570/design-patterns/master/bridge/pic-2.png)
