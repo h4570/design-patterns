@@ -7,6 +7,6 @@ and property copying in *Clone()* method.
 Please look on **DevicesController.cs** to get better view of this implementation.
 
 ### Client code
-![Client code](http://apgcglz.cluster028.hosting.ovh.net/design-patterns/prototype-1.png)
+![Client code](https://raw.githubusercontent.com/h4570/design-patterns/master/prototype/pic-1.png)
 
-![Client code](http://apgcglz.cluster028.hosting.ovh.net/design-patterns/prototype-2.png)
+![Client code](https://raw.githubusercontent.com/h4570/design-patterns/master/prototype/pic-2.png)
