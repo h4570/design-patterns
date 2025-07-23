@@ -35,3 +35,5 @@ Real world examples of most popular design patterns implemented in .NET Core Web
 - [Visitor - TODO](https://github.com/h4570/design-patterns/tree/master/visitor)
 
 [![Stargazers repo roster for h4570/design-patterns](https://reporoster.com/stars/h4570/design-patterns)](https://github.com/h4570/design-patterns/stargazers)
+
+Check my blog at <a href="https://hasto.pl">hasto.pl</a>  
