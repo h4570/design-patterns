@@ -19,7 +19,7 @@ Real world examples of most popular design patterns implemented in ASP.NET Core 
 - [Decorator - Retry, cache and logging around unreliable exchange rate API](https://github.com/h4570/design-patterns/tree/master/decorator)
 - [Facade - E-commerce checkout over inventory, payment, shipping and invoicing](https://github.com/h4570/design-patterns/tree/master/facade)
 - [Flyweight - Stadium seat map with 40 000 seats sharing 3 seat categories](https://github.com/h4570/design-patterns/tree/master/flyweight)
-- [Proxy - TODO](https://github.com/h4570/design-patterns/tree/master/proxy)
+- [Proxy - Lazy, access controlled and audited HR document storage](https://github.com/h4570/design-patterns/tree/master/proxy)
 
 ### Behavioral patterns
 

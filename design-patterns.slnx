@@ -9,5 +9,6 @@
   <Project Path="factory/factory.csproj" />
   <Project Path="flyweight/flyweight.csproj" />
   <Project Path="prototype/prototype.csproj" />
+  <Project Path="proxy/proxy.csproj" />
   <Project Path="singleton/singleton.csproj" />
 </Solution>
