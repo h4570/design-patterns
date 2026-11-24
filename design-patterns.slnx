@@ -10,6 +10,10 @@
   <Project Path="facade/facade.csproj" />
   <Project Path="factory/factory.csproj" />
   <Project Path="flyweight/flyweight.csproj" />
+  <Project Path="iterator/iterator.csproj" />
+  <Project Path="mediator/mediator.csproj" />
+  <Project Path="memento/memento.csproj" />
+  <Project Path="observer/observer.csproj" />
   <Project Path="prototype/prototype.csproj" />
   <Project Path="proxy/proxy.csproj" />
   <Project Path="singleton/singleton.csproj" />
