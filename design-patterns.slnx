@@ -4,6 +4,7 @@
   <Project Path="bridge/bridge.csproj" />
   <Project Path="builder/builder.csproj" />
   <Project Path="chain-of-responsibility/chain-of-responsibility.csproj" />
+  <Project Path="command/command.csproj" />
   <Project Path="composite/composite.csproj" />
   <Project Path="decorator/decorator.csproj" />
   <Project Path="facade/facade.csproj" />
