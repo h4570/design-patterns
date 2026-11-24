@@ -19,13 +19,13 @@ namespace bridge
         {
             if (dbProvider == DbSettings.Postgres)
             {
-                var mongoConnector = new MongodbConnector(configs);
-                return new MongodbProvider(mongoConnector);
+                var postgresContext = new PostgresDbContext(configs);
+                return new PostgresProvider(postgresContext);
             }
             else if (dbProvider == DbSettings.Mongodb)
             {
-                var postgresContext = new PostgresDbContext(configs);
-                return new PostgresProvider(postgresContext);
+                var mongoConnector = new MongodbConnector(configs);
+                return new MongodbProvider(mongoConnector);
             }
             else throw new Exception("Wrong provider");
         }
