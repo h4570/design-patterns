@@ -29,11 +29,9 @@ Real world examples of most popular design patterns implemented in ASP.NET Core 
 - [Mediator - Car rental reservation form with dependent fields](https://github.com/h4570/design-patterns/tree/master/mediator)
 - [Memento - Resume builder with saved versions and revertable AI rewrite](https://github.com/h4570/design-patterns/tree/master/memento)
 - [Observer - Parcel tracking notifying customer SMS, shop webhook and analytics](https://github.com/h4570/design-patterns/tree/master/observer)
-- [State - TODO](https://github.com/h4570/design-patterns/tree/master/state)
-- [Strategy - TODO](https://github.com/h4570/design-patterns/tree/master/strategy)
-- [Template method - TODO](https://github.com/h4570/design-patterns/tree/master/template-method)
-- [Visitor - TODO](https://github.com/h4570/design-patterns/tree/master/visitor)
-
-[![Stargazers repo roster for h4570/design-patterns](https://reporoster.com/stars/h4570/design-patterns)](https://github.com/h4570/design-patterns/stargazers)
+- [State - SaaS subscription lifecycle from trial to cancellation](https://github.com/h4570/design-patterns/tree/master/state)
+- [Strategy - Loan repayment schedule with equal, decreasing and balloon installments](https://github.com/h4570/design-patterns/tree/master/strategy)
+- [Template method - Product import from CSV, JSON and XML wholesaler files](https://github.com/h4570/design-patterns/tree/master/template-method)
+- [Visitor - Shopping cart VAT, delivery and accounting over different item types](https://github.com/h4570/design-patterns/tree/master/visitor)
 
 Check my blog at <a href="https://hasto.pl">hasto.pl</a>  

@@ -17,4 +17,8 @@
   <Project Path="prototype/prototype.csproj" />
   <Project Path="proxy/proxy.csproj" />
   <Project Path="singleton/singleton.csproj" />
+  <Project Path="state/state.csproj" />
+  <Project Path="strategy/strategy.csproj" />
+  <Project Path="template-method/template-method.csproj" />
+  <Project Path="visitor/visitor.csproj" />
 </Solution>
