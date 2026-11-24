@@ -9,7 +9,7 @@ namespace adapter.Z_Bonus1
 
         public string Id {
             get {
-                if (_originalComponent.Id != null)
+                if (_originalComponent.Id != Guid.Empty)
                     return _originalComponent.Id.ToString();
                 else return null;
             }

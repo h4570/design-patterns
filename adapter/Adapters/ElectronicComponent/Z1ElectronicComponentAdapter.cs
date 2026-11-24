@@ -11,7 +11,7 @@ namespace adapter.Adapters.ElectronicComponent
         public IElectronicComponent Adapt(Z1ElectronicComponent component)
         {
             var result = new Models.ElectronicComponent();
-            if (component.Id != null)
+            if (component.Id != Guid.Empty)
                 result.Id = component.Id.ToString();
             result.Warehouse = WarehouseType.Z1;
             result.MPN = component.MPN;

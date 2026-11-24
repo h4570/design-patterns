@@ -12,7 +12,7 @@ namespace adapter.Z_Bonus2
 
         private void AdaptZ1Component(Z1ElectronicComponent component)
         {
-            if (component.Id != null)
+            if (component.Id != Guid.Empty)
                 Id = component.Id.ToString();
             Warehouse = WarehouseType.Z1;
             MPN = component.MPN;

@@ -1,5 +1,5 @@
 # Design patterns in real world examples
-Real world examples of most popular design patterns implemented in .NET Core Web API 
+Real world examples of most popular design patterns implemented in ASP.NET Core Web API (.NET 10)
 
 ## Table of Contents
 
