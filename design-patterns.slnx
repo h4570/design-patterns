@@ -5,6 +5,7 @@
   <Project Path="builder/builder.csproj" />
   <Project Path="composite/composite.csproj" />
   <Project Path="decorator/decorator.csproj" />
+  <Project Path="facade/facade.csproj" />
   <Project Path="factory/factory.csproj" />
   <Project Path="prototype/prototype.csproj" />
   <Project Path="singleton/singleton.csproj" />

@@ -17,7 +17,7 @@ Real world examples of most popular design patterns implemented in ASP.NET Core 
 - [Bridge - Postgres and mongo database via one interface](https://github.com/h4570/design-patterns/tree/master/bridge)
 - [Composite - Shipping cost of order packed into nested boxes](https://github.com/h4570/design-patterns/tree/master/composite)
 - [Decorator - Retry, cache and logging around unreliable exchange rate API](https://github.com/h4570/design-patterns/tree/master/decorator)
-- [Facade - TODO](https://github.com/h4570/design-patterns/tree/master/facade)
+- [Facade - E-commerce checkout over inventory, payment, shipping and invoicing](https://github.com/h4570/design-patterns/tree/master/facade)
 - [Flyweight - TODO](https://github.com/h4570/design-patterns/tree/master/flyweight)
 - [Proxy - TODO](https://github.com/h4570/design-patterns/tree/master/proxy)
 
