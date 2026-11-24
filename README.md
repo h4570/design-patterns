@@ -23,7 +23,7 @@ Real world examples of most popular design patterns implemented in ASP.NET Core 
 
 ### Behavioral patterns
 
-- [Chain of responsibility - TODO](https://github.com/h4570/design-patterns/tree/master/chain-of-responsibility)
+- [Chain of responsibility - Customer support ticket triage from spam filter to human](https://github.com/h4570/design-patterns/tree/master/chain-of-responsibility)
 - [Command - TODO](https://github.com/h4570/design-patterns/tree/master/command)
 - [Iterator - TODO](https://github.com/h4570/design-patterns/tree/master/iterator)
 - [Mediator - TODO](https://github.com/h4570/design-patterns/tree/master/mediator)
