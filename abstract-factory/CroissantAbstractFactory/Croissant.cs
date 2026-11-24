@@ -9,7 +9,6 @@ namespace abstract_factory.CroissantAbstractFactory
         public abstract decimal Price { get; }
         public CroissantSize Size { get => Customization.Size; set => Customization.Size = value; }
         public abstract CroissantType Type { get; }
-        /// <exception cref="T:System.NotImplementedException"></exception>
         public void Make()
         {
             Service.OpenDoor();

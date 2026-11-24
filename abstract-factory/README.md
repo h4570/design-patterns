@@ -23,7 +23,22 @@ public ActionResult<Croissant> CreateChocolateCroissant()
         .GetFactory(CroissantType.Chocolate)
         .GetCroissant(_machineService, customization);
     croissant.Make();
-    return Ok(croissant);
+    return Ok(new { Croissant = (object)croissant, MachineOperations = _machineService.Operations });
+}
+```
+
+### Result (`/croissant/create`)
+There is no real croissant machine, so `MachineService` only records what it was asked to do.  
+Change `CroissantType.Chocolate` to `CroissantType.Sweet` and compare the operations.
+```json
+{
+  "croissant": { "type": 1, "price": 10, "chocolate": 2, "size": 1 },
+  "machineOperations": [
+    "open door", "wait for pickup", "close door",
+    "left arm: 10cm lower", "left arm: 60cm to the right", "left arm: pick up in grams: 2",
+    "left arm: neutral position", "left arm: open hand",
+    "wait for money: 10", "cook: Standard"
+  ]
 }
 ```
 

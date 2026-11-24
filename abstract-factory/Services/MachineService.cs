@@ -1,52 +1,31 @@
-﻿using System;
 using abstract_factory.CroissantAbstractFactory;
 
 namespace abstract_factory.Services
 {
+    /// <summary>
+    /// Croissant machine driver. There is no real hardware here, so every operation is only recorded,
+    /// which lets you see what exactly each croissant type asked the machine to do.
+    /// </summary>
     public class MachineService
     {
 
-        /// <exception cref="T:System.NotImplementedException"></exception>
-        public void WaitForMoney(decimal price)
-        {
-            throw new NotImplementedException();
-        }
+        private readonly List<string> _operations = new();
 
-        /// <exception cref="T:System.NotImplementedException"></exception>
-        public void WaitForPickup()
-        {
-            throw new NotImplementedException();
-        }
+        public IReadOnlyList<string> Operations => _operations;
 
-        /// <exception cref="T:System.NotImplementedException"></exception>
-        public void OpenDoor()
-        {
-            throw new NotImplementedException();
-        }
+        public void WaitForMoney(decimal price) => _operations.Add($"wait for money: {price}");
 
-        /// <exception cref="T:System.NotImplementedException"></exception>
-        public void CustomOperation(string command)
-        {
-            throw new NotImplementedException();
-        }
+        public void WaitForPickup() => _operations.Add("wait for pickup");
 
-        /// <exception cref="T:System.NotImplementedException"></exception>
-        public void AddChocolate(CroissantChocolateAmount chocolate)
-        {
-            throw new NotImplementedException();
-        }
+        public void OpenDoor() => _operations.Add("open door");
 
-        /// <exception cref="T:System.NotImplementedException"></exception>
-        public void Cook(CroissantSize size)
-        {
-            throw new NotImplementedException();
-        }
+        public void CustomOperation(string command) => _operations.Add(command);
 
-        /// <exception cref="T:System.NotImplementedException"></exception>
-        public void CloseDoor()
-        {
-            throw new NotImplementedException();
-        }
+        public void AddChocolate(CroissantChocolateAmount chocolate) => _operations.Add($"add chocolate: {chocolate}");
+
+        public void Cook(CroissantSize size) => _operations.Add($"cook: {size}");
+
+        public void CloseDoor() => _operations.Add("close door");
 
     }
 }

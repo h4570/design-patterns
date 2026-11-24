@@ -21,13 +21,11 @@ namespace abstract_factory.CroissantAbstractFactory
 
         protected override MachineService Service { get; }
         protected sealed override CroissantCustomization Customization { get; set; }
-        /// <exception cref="T:System.NotImplementedException"></exception>
         protected override void CustomOperation()
         {
             AddSugar(Customization.Sugar);
         }
 
-        /// <exception cref="T:System.NotImplementedException"></exception>
         public void AddSugar(CroissantSugarAmount sugar)
         {
             Service.CustomOperation("left arm: 10cm lower");

@@ -20,13 +20,11 @@ namespace abstract_factory.CroissantAbstractFactory
 
         protected override MachineService Service { get; }
         protected sealed override CroissantCustomization Customization { get; set; }
-        /// <exception cref="T:System.NotImplementedException"></exception>
         protected override void CustomOperation()
         {
             AddChocolate(Customization.Chocolate);
         }
 
-        /// <exception cref="T:System.NotImplementedException"></exception>
         private void AddChocolate(CroissantChocolateAmount chocolate)
         {
             Service.CustomOperation("left arm: 10cm lower");

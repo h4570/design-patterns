@@ -17,9 +17,8 @@ namespace abstract_factory.Controllers
             _machineService = new MachineService();
         }
 
-        /// <exception cref="T:System.NotImplementedException"></exception>
         [HttpGet("create")]
-        public ActionResult<Croissant> CreateChocolateCroissant()
+        public ActionResult<object> CreateChocolateCroissant()
         {
             var customization = new CroissantCustomization()
             {
@@ -29,7 +28,8 @@ namespace abstract_factory.Controllers
                 .GetFactory(CroissantType.Chocolate)
                 .GetCroissant(_machineService, customization);
             croissant.Make();
-            return Ok(croissant);
+            // (object) - serialize runtime type, so ChocolateCroissant properties are visible too
+            return Ok(new { Croissant = (object)croissant, MachineOperations = _machineService.Operations });
         }
 
     }
