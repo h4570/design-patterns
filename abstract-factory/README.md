@@ -11,6 +11,53 @@ Unlike factory, its main purpose is to create objects or another factories.
 I described core difference between factory and abstract factory in factory/README.md
 
 ### Client code
-![Client code](https://raw.githubusercontent.com/h4570/design-patterns/master/abstract-factory/pic-1.png)
+```csharp
+[HttpGet("create")]
+public ActionResult<Croissant> CreateChocolateCroissant()
+{
+    var customization = new CroissantCustomization()
+    {
+        Chocolate = CroissantChocolateAmount.DoubleChocolate
+    };
+    var croissant = CroissantFactory
+        .GetFactory(CroissantType.Chocolate)
+        .GetCroissant(_machineService, customization);
+    croissant.Make();
+    return Ok(croissant);
+}
+```
 
-![Client code](https://raw.githubusercontent.com/h4570/design-patterns/master/abstract-factory/pic-2.png)
+### Abstract factory
+```csharp
+public abstract class CroissantFactory
+{
+    public abstract Croissant GetCroissant(MachineService service, CroissantCustomization customization);
+
+    public static CroissantFactory GetFactory(CroissantType type)
+    {
+        return type switch
+        {
+            CroissantType.Chocolate => new ChocolateCroissantFactory(),
+            CroissantType.Sweet => new SweetCroissantFactory(),
+            _ => throw new NotImplementedException()
+        };
+    }
+}
+```
+
+### Files structure
+```
+abstract-factory
+├── Controllers
+│   └── CroissantController.cs
+├── CroissantAbstractFactory
+│   ├── ChocolateCroissant.cs
+│   ├── ChocolateCroissantFactory.cs
+│   ├── Croissant.cs
+│   ├── CroissantCustomization.cs
+│   ├── CroissantFactory.cs
+│   ├── SweetCroissant.cs
+│   └── SweetCroissantFactory.cs
+└── Services
+    └── MachineService.cs
+```

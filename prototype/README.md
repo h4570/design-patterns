@@ -7,6 +7,38 @@ and property copying in *Clone()* method.
 Please look on **DevicesController.cs** to get better view of this implementation.
 
 ### Client code
-![Client code](https://raw.githubusercontent.com/h4570/design-patterns/master/prototype/pic-1.png)
+```csharp
+[HttpGet]
+public ActionResult<IEnumerable<IDevice>> Get()
+{
+    var smartphone = new Smartphone() { Id = 1, Name = "Super phone" };
+    _deviceProtoRegistry.Add(smartphone);
 
-![Client code](https://raw.githubusercontent.com/h4570/design-patterns/master/prototype/pic-2.png)
+    var copy = _deviceProtoRegistry.GetCopyById(1);
+    copy.Id = 2;
+
+    return Ok(new List<IDevice>() { smartphone, copy });
+}
+```
+
+### Prototype registry
+```csharp
+public class DevicePrototypeRegistry
+{
+    private readonly List<IDevice> _items;
+
+    public DevicePrototypeRegistry()
+    {
+        _items = new List<IDevice>();
+    }
+
+    public void Add(IDevice device) { _items.Add(device); }
+
+    public IDevice GetCopyById(int id)
+    {
+        var item = _items.SingleOrDefault(c => c.Id.Equals(id));
+        if (item != null) return item.Clone();
+        else throw new System.Exception("Provided device id was not found");
+    }
+}
+```

@@ -15,8 +15,46 @@ An example implementation of factory may modify createProduct(), but doSomething
 Customer will be used mostly doSomething() method.
 
 ### Client code
-![Client code](https://raw.githubusercontent.com/h4570/design-patterns/master/factory/pic-1.png)
+```csharp
+[HttpGet]
+public IEnumerable<Tuple<ICustomer, decimal>> CreateCustomersAndCalcDiscounts()
+{
+    var result = new List<Tuple<ICustomer, decimal>>();
 
-![Client code](https://raw.githubusercontent.com/h4570/design-patterns/master/factory/pic-2.png)
+    decimal applePrice = 10;
 
-![Client code](https://raw.githubusercontent.com/h4570/design-patterns/master/factory/pic-3.png)
+    var veteran = _warVeteransFactory.Create();
+    var student = _studentsFactory.Create();
+
+    var veteranDiscount = _warVeteransFactory.AddDiscount(veteran, applePrice);
+    var studentDiscount = _studentsFactory.AddDiscount(student, applePrice);
+
+    result.Add(Tuple.Create(veteran, veteranDiscount));
+    result.Add(Tuple.Create(student, studentDiscount));
+
+    return result;
+}
+```
+
+### Factory
+```csharp
+public abstract class CustomerFactory
+{
+    public abstract ICustomer Create();
+    public abstract IEnumerable<ICustomer> GetAll();
+
+    public decimal AddDiscount(ICustomer customer, decimal price)
+    {
+        var disc = 100 - customer.DiscountPercentage;
+        return price * (disc / (decimal)100);
+    }
+}
+```
+
+### Result (`/customer`)
+```json
+[
+  { "item1": { "id": 2, "fullName": "Carl Johnson", "discountPercentage": 40, "type": 2 }, "item2": 6.0 },
+  { "item1": { "id": 1, "fullName": "John Doe", "discountPercentage": 10, "type": 1 }, "item2": 9.0 }
+]
+```
