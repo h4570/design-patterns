@@ -1,6 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using singleton.Services;
-using System;
 
 namespace singleton.Controllers
 {
@@ -21,7 +20,18 @@ namespace singleton.Controllers
         {
             var currentSecondInString = DateTime.Now.Second.ToString();
             _loggerService.Add(currentSecondInString);
-            return Ok("done");
+            return Ok($"done - log will be saved to {_loggerService.FilePath} within {LoggerService.SaveInterval.TotalSeconds} s");
+        }
+
+        /// <summary>
+        /// Saves pending logs immediately and returns the last lines of the file.
+        /// </summary>
+        [HttpGet("flush")]
+        public ActionResult<IEnumerable<string>> Flush()
+        {
+            _loggerService.Flush();
+            if (!System.IO.File.Exists(_loggerService.FilePath)) return Ok(Array.Empty<string>());
+            return Ok(System.IO.File.ReadLines(_loggerService.FilePath).TakeLast(10));
         }
 
     }

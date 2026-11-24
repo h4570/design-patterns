@@ -1,37 +1,41 @@
-﻿using System;
-using System.Collections.Concurrent;
-using System.IO;
-using System.Threading;
+﻿using System.Collections.Concurrent;
 
 namespace singleton.Services
 {
-    public class LoggerService
+    /// <summary>
+    /// Thread safe file logger. Logs are collected in memory and written to the file in batches by a timer,
+    /// so requests never wait for disk I/O.
+    /// </summary>
+    public sealed class LoggerService : IDisposable
     {
 
-        public readonly Timer SaveLogsTimer;
+        public static readonly TimeSpan SaveInterval = TimeSpan.FromSeconds(5);
+        public string FilePath { get; }
 
-        private static LoggerService _instance;
-        private static readonly object _lock = new object();
-        private bool _loggerIsBusy;
-        private int _saveLogsFailCount;
-        private const int LOG_FAIL_COUNT = 5;
+        // volatile - other threads must never see a reference to a not fully constructed object
+        private static volatile LoggerService _instance;
+        private static readonly object _instanceLock = new();
+
+        private readonly ConcurrentQueue<string> _logs = new();
+        // Logs taken from the queue, but not saved yet (e.g. file was locked). Accessed only under _saveLock.
+        private readonly List<string> _unsaved = new();
+        private readonly object _saveLock = new();
+        private readonly Timer _saveLogsTimer;
+        private bool _disposed;
 
         private LoggerService()
         {
-            _saveLogsFailCount = 0;
-            _logs = new ConcurrentQueue<string>();
-            var startTimeSpan = TimeSpan.Zero;
-            var periodTimeSpan = TimeSpan.FromMinutes(1);
-            SaveLogsTimer = new Timer((e) => SaveLogs(), null, startTimeSpan, periodTimeSpan);
+            FilePath = Path.Combine(Directory.GetCurrentDirectory(), "logs", "log.txt");
+            _saveLogsTimer = new Timer(_ => SaveLogs(waitForPreviousSave: false), null, SaveInterval, SaveInterval);
         }
 
         public static LoggerService GetInstance()
         {
-            // Description: 
-            // 3 threads are using this constructor at the same time
+            // Description:
+            // 3 threads are using this method at the same time
             if (_instance == null)
                 // All 3 threads goes there
-                lock (_lock)
+                lock (_instanceLock)
                     // One of them is using lock and goes there, other waits before lock.
                     if (_instance == null)
                         // One of threads is creating instance, other 2 threads after wait, will not reach this place
@@ -39,28 +43,51 @@ namespace singleton.Services
             return _instance;
         }
 
-        private readonly ConcurrentQueue<string> _logs;
+        public void Add(string log) => _logs.Enqueue($"{DateTime.Now:yyyy-MM-dd HH:mm:ss.fff} {log}");
 
-        public void Add(string log) { _logs.Enqueue(log); }
+        /// <summary>
+        /// Writes all pending logs to the file right now.
+        /// </summary>
+        public void Flush() => SaveLogs(waitForPreviousSave: true);
 
-        private void SaveLogs()
+        private void SaveLogs(bool waitForPreviousSave)
         {
-            if (_saveLogsFailCount > LOG_FAIL_COUNT) throw new Exception($"Logger failed to save logs {LOG_FAIL_COUNT} times");
-            if (!_loggerIsBusy)
+            // Timer ticks can overlap when saving is slow. Next tick will simply take what is left.
+            if (waitForPreviousSave) Monitor.Enter(_saveLock);
+            else if (!Monitor.TryEnter(_saveLock)) return;
+
+            try
             {
-                _saveLogsFailCount = 0;
-                var count = _logs.Count;
-                if (count > 0)
-                {
-                    _loggerIsBusy = true;
-                    var logsToSave = new string[count];
-                    _logs.CopyTo(logsToSave, 0);
-                    _logs.Clear();
-                    File.AppendAllLines(Environment.ExpandEnvironmentVariables(@"%USERPROFILE%\Desktop\log.txt"), logsToSave);
-                    _loggerIsBusy = false;
-                }
+                // TryDequeue instead of CopyTo() + Clear() - logs added in between are not lost
+                while (_logs.TryDequeue(out var log))
+                    _unsaved.Add(log);
+                if (_unsaved.Count == 0) return;
+
+                Directory.CreateDirectory(Path.GetDirectoryName(FilePath));
+                File.AppendAllLines(FilePath, _unsaved);
+                _unsaved.Clear();
             }
-            else _saveLogsFailCount++;
+            catch (IOException ex)
+            {
+                // Never throw from timer callback - it would kill the whole application.
+                // Logs stay in _unsaved and will be saved with next tick.
+                Console.Error.WriteLine($"LoggerService: cannot save {_unsaved.Count} logs, will retry. {ex.Message}");
+            }
+            finally
+            {
+                Monitor.Exit(_saveLock);
+            }
+        }
+
+        /// <summary>
+        /// Called by DI container on application shutdown - saves what is still in memory.
+        /// </summary>
+        public void Dispose()
+        {
+            if (_disposed) return;
+            _disposed = true;
+            _saveLogsTimer.Dispose();
+            Flush();
         }
 
     }
