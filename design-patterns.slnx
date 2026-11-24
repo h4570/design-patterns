@@ -1,11 +1,9 @@
 <Solution>
-  <Configurations>
-    <Platform Name="Any CPU" />
-  </Configurations>
   <Project Path="abstract-factory/abstract-factory.csproj" />
   <Project Path="adapter/adapter.csproj" />
   <Project Path="bridge/bridge.csproj" />
   <Project Path="builder/builder.csproj" />
+  <Project Path="composite/composite.csproj" />
   <Project Path="factory/factory.csproj" />
   <Project Path="prototype/prototype.csproj" />
   <Project Path="singleton/singleton.csproj" />
